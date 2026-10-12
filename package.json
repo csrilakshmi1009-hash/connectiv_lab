@@ -1,0 +1,14 @@
+{
+  "name": "connectiv-website",
+  "version": "1.0.0",
+  "description": "Connectiv Technologies and Solutions - company website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}

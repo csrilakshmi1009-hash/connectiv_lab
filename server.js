@@ -36,6 +36,12 @@ const server = http.createServer((req, res) => {
     res.writeHead(400);
     return res.end('Bad request');
   }
+  // Lightweight endpoint for the hosting platform's health checks
+  if (urlPath === '/health' || urlPath === '/healthz' || urlPath === '/api/health') {
+    res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8', 'Cache-Control': 'no-store' });
+    return res.end('ok');
+  }
+
   if (urlPath.endsWith('/')) urlPath += 'index.html';
 
   // Block path traversal: the resolved file must stay inside ./public

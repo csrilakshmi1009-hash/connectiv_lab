@@ -4,6 +4,7 @@
   "description": "Connectiv Technologies and Solutions - company website",
   "main": "server.js",
   "scripts": {
+    "build": "node -e \"console.log('Static site: no build step needed')\"",
     "start": "node server.js"
   },
   "engines": {
